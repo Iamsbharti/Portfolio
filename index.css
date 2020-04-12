@@ -8,7 +8,8 @@ body {
 }
 
 .container {
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin: 5vw;
 }
 
@@ -17,7 +18,8 @@ body {
   border: 1px solid #2c2c2c;
   border-radius: 10px;
   box-shadow: 0px 3px 20px 2px #35eea4;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .banner .card .heading {
   color: #35eea4;
@@ -53,8 +55,9 @@ body {
 }
 
 .row {
-  display: block;
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-top: 5vh;
 }
 
@@ -63,18 +66,26 @@ body {
   border-radius: 5px;
   box-shadow: 0px 3px 20px 2px #2c2c2c;
   width: 25vw;
-  float: right;
 }
-
+@media only screen and (max-width: 725px) {
+  .row {
+    flex-direction: column;
+  }
+  .row .image {
+    order: 1;
+  }
+  .row .my-image {
+    width: 90vm;
+  }
+}
 .paragraph {
-  float: left;
   color: #2c2c2c;
   font-family: "Istok Web", sans-serif;
-  width: 60%;
+  padding: 5vw 5vw 5vw 0;
 }
 
 .icon-group {
-  margin-top: 20px;
+  margin-top: 2vh;
 }
 .icon-group .icon {
   margin-right: 10px;
